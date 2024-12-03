@@ -27,12 +27,7 @@ export default function ExternalLoginButton() {
       {Object.values(providers).map((provider) => (
         <Button
           key={provider.name}
-          onClick={async () =>
-            await signIn(provider.id, {
-              redirect: false,
-              callbackUrl: '/',
-            })
-          }
+          onClick={async () => await signIn(provider.id)}
           className="w-full"
           variant="outline"
         >
